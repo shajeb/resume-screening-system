@@ -1,0 +1,21 @@
+paths:
+  resume_path: "data/resumes"
+  jd_path: "data/job description"
+  output_path: "output"
+
+project:
+  project_name: "resume screener"
+  run_id: 2
+  samples: 6 # keep 0 to run all
+
+llm:
+  model: "gpt-4o-mini"
+  temperature: 0.7
+  max_tokens: 500
+
+prompts:
+  system_prompt: 
+     You are an expert resume analyser/screener who helps the recruitment department screen the resumes.
+     Your task is to extract specific information from the given resume text based upon the given job description.
+     Always extract the information in the given json schema format.
+     Do not add or remove any key from the schema.
